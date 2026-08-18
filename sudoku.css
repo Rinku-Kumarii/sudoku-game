@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+hr {
+    width: 500px;
+    max-width: 90%;
+}
+
+#errors {
+    color: coral;
+}
+
+/* Sudoku Board */
+#board {
+    width: 360px;
+    height: 360px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+/* Individual Sudoku Tile */
+.tile {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+
+    border: 1px solid black;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+/* Pre-filled numbers */
+.tile-start {
+    background-color: whitesmoke;
+}
+
+/* Number buttons */
+#digits {
+    width: 360px;
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.number {
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid black;
+    margin: 2px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    cursor: pointer;
+}
+
+.number:hover {
+    background-color: lightgray;
+}
+
+/* Selected number */
+.number-selected {
+    background-color: grey;
+    color: white;
+}
+
+/* Thick Sudoku Grid Lines */
+
+.horizontal-start {
+    border-top: 2px solid black;
+}
+
+.horizontal-line {
+    border-bottom: 2px solid black;
+}
+
+.vertical-start {
+    border-left: 2px solid black;
+}
+
+.vertical-line {
+    border-right: 2px solid black;
+}
+
+/* Mobile responsive */
+@media (max-width: 450px) {
+
+    #board {
+        width: 315px;
+        height: 315px;
+    }
+
+    .tile {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    #digits {
+        width: 315px;
+    }
+}
